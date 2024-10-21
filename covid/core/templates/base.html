@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block head %}
+    {% endblock head %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <div class="col text-center">
+                <h1 class="header">COVID APP</h1>
+            </div>
+            <ul class="list flex-row">
+                {% url 'countries:home' as url3%}
+                {% url 'countries:country_list' as url1%}
+                {% url 'countries:add_user' as url2%}
+                {% url 'countries:info' as url4%}
+                <li class="item"> <a href="{{url3}}" {% if request.path == url3 %} class="active"{% endif %}> Home </a> </li>
+                <li class="item"> <a href="{{url1}}" {% if request.path == url1 %} class="active"{% endif %}> Countries </a> </li>
+                <li class="item"> <a href="{{url2}}" {% if request.path == url2 %} class="active"{% endif %}> Notification </a> </li>
+                 <li class="item"> <a href="{{url4}}" {% if request.path == url4 %} class="active"{% endif %}> Information </a> </li>
+            </ul>
+        </div>
+    </nav>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% block content %}
+    {% endblock content %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

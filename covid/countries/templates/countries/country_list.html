@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <br>
+    <center>
+        <u><h1>List</h1></u>
+        <form method="post" action="{% url 'countries:fetch_countries' %}">
+            {% csrf_token %}
+            <button type="submit" id="fetch-countries-button">Fetch Countries</button>
+        </form>
+        
+        <form method="get" id="live-search-form">
+            {% csrf_token %}
+            <input type="text" name="q" id="search-input" placeholder=" Search..." autocomplete="off">
+        </form>
+
+        <div id="search-results">
+            {% for country in object_list %}
+                <li class="gradient blue"> <a href="{% url 'countries:country_detail' country.id %}">{{ country.name|safe }}</a> </li>
+            {% endfor %}
+        </div>
+    </center>
+    <script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+{% endblock content %}

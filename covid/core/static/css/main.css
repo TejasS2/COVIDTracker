@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif !important;
+    line-height: 1.6;
+}
+
+.header {
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 3px;
+    text-shadow: 4px 3px 3px #1b365d;
+    border-bottom: #000;
+    z-index: 1px;
+}
+
+nav {
+    width: 100%;
+    background-image: linear-gradient(160deg, #0093e9 0%, #0adaff 100%);
+    justify-content: center;
+    flex-direction: row;
+    margin-top: -20px;
+}
+
+.list {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.active {
+    z-index: 1;
+    padding: 10px;
+    background: #000;
+    border-radius: 5px;
+}
+
+.item {
+    padding: 10px;
+    margin: 10px;
+    z-index: 20;
+    border: none;
+}
+
+.item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 3px;
+    text-shadow: 4px 3px 3px #1b365d;
+}
+
+h5 {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    padding: relative;
+    margin: 10px;
+    position: relative;
+}
+
+.gradient {
+    height: 55px;
+	width: 200px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	background-size: 300% 100%;
+	border-radius: 50px;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+    line-height: 55px;
+}
+
+.gradient:hover {
+    background-position: 100% 0;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+
+.blue {
+    background-image: linear-gradient(to right,#3d87ff, #0adaff, #7e3dff , #3A86FF);
+	box-shadow: 0 4px 15px 0 #0a91ff;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+#search-input {
+    height: 30px;
+    align-items: stretch;
+}
+
+.django-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.django-form input[type="text"],
+.django-form input[type="email"],
+.django-form select,
+.django-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.django-form input[type="text"]:focus,
+.django-form input[type="email"]:focus,
+.django-form select:focus,
+.django-form textarea:focus {
+    border-color: #3d87ff;
+}
+
+.django-form button {
+    background-color: #2896f1;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.django-form button:hover {
+    background-color: #0783ff;
+}
+
+ul {
+    padding: 0;
+}
+
+p {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h2 {
+    padding-left: 10px;
+    color: #007BFF;
+}
+
+strong {
+    color: #e72336;
+}
+
+.info {
+    display: block !important;
+    margin-bottom: 15px !important;
+}
+
+.map {
+    padding-left: 20px;
+}
+
+.nav-link {
+    color: #007BFF !important;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.data-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-item {
+    flex: 1;
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}

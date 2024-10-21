@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div style="display: flex;">
+
+    <div style="flex: 1; padding: 20px 20px 20px 0;">
+        <h1 class="map">{{ object.name|safe }}</h1>
+
+        <p class="map">Available Data Dates:</p>
+
+        <form action="{% url 'countries:fetch_data' object.id %}" method="post">
+            {% csrf_token %}
+            <label for="fetch-date" class="map">Select Date:</label>
+            <input type="date" id="fetch-date" name="fetch_date" required>
+            <button type="submit">Fetch Data</button>
+        </form>
+
+        <ul class="map">
+            {% for date in dates %}
+            <li style="margin-bottom: 10px;">
+                <a href="{% url 'countries:country_date_detail' object.id date %}" style="color: blue;">{{ date }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div style="flex: 1; margin: 20px 20px 20px 0px;">
+        <div class="map">
+            <iframe width="600" height="450" frameborder="0" style="border:0"
+                src="{{ google_maps_embed_url }}" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}

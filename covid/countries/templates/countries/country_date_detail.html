@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="map">
+    <br/>
+    <a class="nav-link" href="{% url 'countries:country_detail' country.id %}"> {{ country.name }}</a><br/>
+    <h1>Data for {{ object.name }} on {{ data_for_date.date }}</h1>
+    <div class="data-container">
+        <div class="data-item">
+            <p>Total Deaths: {{ data_for_date.total_deaths }}</p>
+            <p>New Deaths: {{ data_for_date.new_deaths }}</p>
+            <p>New Infected: {{ data_for_date.new_infected }}</p>
+            <p>Total Infected: {{ data_for_date.total_infected }}</p>
+        </div>
+        <div class="data-item">
+            <p>Critical Cases: {{ data_for_date.critical }}</p>
+            <p>Recovered Cases: {{ data_for_date.recovered }}</p>
+            <p>Cases per 1M Population: {{ data_for_date.cases_per_1M }}</p>
+        </div>
+        <div class="data-item">
+            <p>Total Tests Conducted: {{ data_for_date.total_tests }}</p>
+            <p>Tests per 1M Population: {{ data_for_date.test_per_1M }}</p>
+        </div>
+    </div>
+</div> 
+{% endblock content %}

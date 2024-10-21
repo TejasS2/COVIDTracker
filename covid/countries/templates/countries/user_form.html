@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<br />
+<center>
+	<u> <h1>Add User</h1> </u>
+	<form method="post" class="django-form">
+		{% csrf_token %} {{ form.as_p }}
+		<button type="submit">Submit</button>
+	</form>
+</center>
+{% endblock %}

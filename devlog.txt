@@ -1,0 +1,53 @@
+﻿Project Name: Covid Tracker
+
+Members:
+* Tejas Siddaramaiah
+* Ken Lin
+* Daniel Kibatullin
+
+(One Person logs for everyone)
+
+TejasS -- 2024-01-08 19:15
+We formed our final group and discussed what would be the most appropriate API for our project that would both be beneficial to society and usable. We decided to use the COVID-19 API by API-SPORTS, as it had an updated list of all COVID statistics from around the world.
+
+KenL -- 2024-01-09 20:31
+We worked on the design document and came up with the applications that we would use for the time—dashboard, information, and notifications. We created the diagrams for the site map and the database. We created the git repository and added the files inside of it but only set up the basic parts of it.
+
+DanielK -- 2024-01-10 21:57
+We started working more in the repo, adding models and fixing anything janky in the settings or with the extensions and other necessary files like URLs. We also had discussions on how our current project structures, like the applications, fit into our goals for the project.
+
+DanielK -- 2024-01-11 21:03
+We worked on the views and the HTML templates for the models. We collectively checked the graphs together to make sure they still worked. There was also a little issue with the data that the API returned, but we found a solution. Ken worked on fixing up the design document at home while Tejas and Daniel worked on the dev log.
+
+TejasS -- 2024-01-12 17:05
+We worked on building the models and changed them to more accurately fit our project goals. We conglomerated the deaths, cases, and statistics into one data table. We also worked on the views for the country. We also set up the views for the website.
+
+TejasS -- 2024-01-13 to 2024-01-15 12:19
+I reworked the database to more accurately fit the project goals, based on the database design and previous database work. I set up the connection from the project to the Postgres server to collect the data and users. I then created the Jupyter Notebook to upload the data from the API into the database for countries and data. I also worked on the basic templates to display the data. I also worked on the notification feature in the application.
+
+TejasS -- 2024-01-16 22:58
+We worked on database issues in class, as we had problems accessing the Lisa databases from other accounts. I worked on setting up the SMTP server using Gmail, and I was successful in his endeavors to send daily emails at 7:30 AM to users with notifications on. Ken added a navbar and worked on the design document.
+
+KenL -- 2024-01-17 19:25
+I added a homepage with information on how to run the website. I also did the README and added information to the launch codes. Tejas worked on a button to initialize the data in the database.
+
+KenL -- 2024-01-18 20:39
+I added a live search bar for countries and did the front end, like the CSS, for countries.
+
+TejasS -- 2024-01-19 19:52
+We discussed how to implement our plan to update the data based on a calendar input from the user. We also modified the CSS in the live search to create a more aesthetically pleasing design.
+
+DanielK -- 2024-01-20 18:29
+I added API and Modal and added Bootstrap to format the web pages better. Ken used Bootstrap to modify the navbar orientation.
+
+KenL -- 2024-01-21 15:23
+I added the front end for the Notifications page and worked on the design document. Tejas fixed the forms to fetch the countries and the data in each country.
+
+DanielK -- 2024-01-21 18:56
+I added an information page and added the COVID-related information inside the page. Ken worked on the CSS for the information page. Tejas fixed saving the API key in the modal and added a Google Map of each country.
+
+TejasS -- 2024-01-21 18:03
+I updated the README to give instructions to update the website, and Ken updated the CSS to provide more padding to the information displayed on the page.
+
+KenL -- 2024-01-22 19:31
+I updated the format of each country so that the map is to the right of the page. I also updated the CSS for each country's date detail and added JS files. Tejas moved the API key and other info to secrets.json while removing the modal to add simplicity.
